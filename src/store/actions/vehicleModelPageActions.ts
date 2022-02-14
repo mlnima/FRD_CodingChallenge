@@ -19,10 +19,18 @@ export const getVehicleModelData = (vehicleManufacturerName, carModel: string | 
                     type: types.SET_GOT_RESULT,
                     payload: true
                 })
+                dispatch({
+                    type: types.SET_ERROR,
+                    payload: null
+                })
             } else {
                 dispatch({
                     type: types.SET_GOT_RESULT,
                     payload: false
+                })
+                dispatch({
+                    type: types.SET_ERROR,
+                    payload: null
                 })
             }
         }).catch((serverError: AxiosError<any>) => {

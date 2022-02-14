@@ -14,10 +14,19 @@ export const getVehicleManufacturers = () => async (dispatch: any) => {
                     type: types.SET_GOT_RESULT,
                     payload: true
                 })
+
+                dispatch({
+                    type: types.SET_ERROR,
+                    payload: null
+                })
             } else {
                 dispatch({
                     type: types.SET_GOT_RESULT,
                     payload: false
+                })
+                dispatch({
+                    type: types.SET_ERROR,
+                    payload: null
                 })
             }
         }).catch((serverError: AxiosError<any>) => {
@@ -44,6 +53,10 @@ export const getVehicleManufacturer = (vehicleManufacturerName: GetVehicleManufa
                     type: types.SET_GOT_RESULT,
                     payload: true
                 })
+                dispatch({
+                    type: types.SET_ERROR,
+                    payload: null
+                })
             } else {
                 dispatch({
                     type: types.SET_GOT_RESULT,
@@ -52,6 +65,10 @@ export const getVehicleManufacturer = (vehicleManufacturerName: GetVehicleManufa
                 dispatch({
                     type: types.GET_VEHICLE_MANUFACTURER,
                     payload: []
+                })
+                dispatch({
+                    type: types.SET_ERROR,
+                    payload: null
                 })
             }
 
