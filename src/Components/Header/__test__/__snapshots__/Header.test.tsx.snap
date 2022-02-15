@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders Header component 1`] = `
+<header
+  class="sc-dkPtRN bJuTIo header"
+  id="header"
+>
+  <a
+    class="sc-bdvvtL gYXAjx"
+    href="/"
+    title="friday"
+  >
+    <img
+      alt="logo"
+      class="logo-image"
+      src="/images/logo.png"
+    />
+  </a>
+  <nav
+    class="sc-gsDKAQ CsWXP"
+  >
+    <a
+      class="navigation-item"
+      href="/vehicleManufacturers"
+    >
+      Vehicle Manufacturers
+    </a>
+  </nav>
+</header>
+`;
+
+exports[`Header renders Header component 2`] = `
+<header
+  class="sc-dkPtRN bJuTIo header"
+  id="header"
+>
+  <a
+    class="sc-bdvvtL gYXAjx"
+    href="/"
+    title="friday"
+  >
+    <img
+      alt="logo"
+      class="logo-image"
+      src="/images/logo.png"
+    />
+  </a>
+  <nav
+    class="sc-gsDKAQ CsWXP"
+  >
+    <a
+      class="navigation-item"
+      href="/vehicleManufacturers"
+    >
+      Vehicle Manufacturers
+    </a>
+  </nav>
+</header>
+`;

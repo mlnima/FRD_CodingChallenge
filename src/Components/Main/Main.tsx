@@ -9,13 +9,12 @@ import HomePage from "./Pages/HomePage/HomePage";
 
 const PagesStyledMain = styled.main`
   margin: auto;
-  max-width: 1300px;
 `
 
 const Main : FC = () => {
 
     return (
-        <PagesStyledMain>
+        <PagesStyledMain className={'main'}>
             <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/vehicleManufacturers" element={<VehicleManufacturersPage />} />

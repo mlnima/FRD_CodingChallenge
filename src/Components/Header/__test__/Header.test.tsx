@@ -7,12 +7,20 @@ import {BrowserRouter} from "react-router-dom";
 
 describe('Header', () => {
     test('renders Header component', () => {
-        render(
+
+        const view = render(
             <BrowserRouter>
                 <Provider store={store}>
                     <Header/>
                 </Provider>
             </BrowserRouter>
         );
+
+        const headerElement = view.container.querySelector('#header')
+        expect(headerElement).toBeInTheDocument();
+        expect(headerElement).toHaveClass('header');
+        expect(headerElement).toMatchSnapshot()
+
     });
+
 });

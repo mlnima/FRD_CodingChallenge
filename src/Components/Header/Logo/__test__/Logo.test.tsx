@@ -16,5 +16,6 @@ describe('Logo', () => {
         );
         expect(screen.getByTitle('friday')).toBeInTheDocument();
         expect(screen.getByAltText('logo')).toBeInTheDocument();
+        expect(screen).toMatchSnapshot()
     });
 });

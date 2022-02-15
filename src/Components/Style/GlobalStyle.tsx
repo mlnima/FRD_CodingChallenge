@@ -13,8 +13,8 @@ const GlobalStyles = createGlobalStyle`
       --primary-button-link-background-color: #f90;
       --primary-button-link-text-color: #000;
 
-      --secondary-button-link-background-color: #fff;
-      --secondary-button-link-text-color: #202020;
+      --secondary-button-link-background-color: #7E57C2;
+      --secondary-button-link-text-color: #fff;
 
       --danger-button-link-background-color:#fff;
       --danger-button-link-text-color:red;

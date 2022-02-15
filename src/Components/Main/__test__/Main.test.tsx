@@ -7,12 +7,16 @@ import {BrowserRouter} from "react-router-dom";
 
 describe('Main', () => {
     test('renders Main component', () => {
-        render(
+
+        const view = render(
             <BrowserRouter>
                 <Provider store={store}>
                     <Main/>
                 </Provider>
             </BrowserRouter>
         );
+
+        const mainRouter = view.container.querySelector('.main')
+        expect(mainRouter).toBeInTheDocument()
     });
 });

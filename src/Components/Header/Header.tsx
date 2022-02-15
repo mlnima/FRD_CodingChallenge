@@ -15,7 +15,7 @@ const HeaderStyledHeader = styled.header`
 
 const Header :React.FC = () => {
     return (
-        <HeaderStyledHeader id={'header'}>
+        <HeaderStyledHeader id={'header'} className={'header'}>
             <Logo/>
             <Navigation/>
         </HeaderStyledHeader>

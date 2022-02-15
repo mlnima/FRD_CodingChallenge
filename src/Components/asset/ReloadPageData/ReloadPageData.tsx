@@ -13,10 +13,10 @@ const ReloadPageData: FC = () => {
 
     return (
         <div>
-            <h1>We Are Sorry Something Went Wrong.</h1>
-            <p>Please try again in few minutes</p>
+            <h1>We Are Sorry Something Went Wrong</h1>
+            <p className={'retry-message'}>Please try again in few minutes</p>
             <button aria-label={'Reload'}
-                    className={'btn btn-primary'}
+                    className={'btn btn-primary reload-button'}
                     onClick={()=>dispatch(()=>onClickHandler())}
             >
                 Reload

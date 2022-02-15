@@ -14,6 +14,7 @@ describe('Navigation', () => {
                 </Provider>
             </BrowserRouter>
         );
-        expect(screen.getByText('Vehicle Manufacturers')).toBeInTheDocument();
+        expect(screen.getByText('Vehicle Manufacturers'))
+            .toHaveAttribute('href', '/vehicleManufacturers');
     });
 });
