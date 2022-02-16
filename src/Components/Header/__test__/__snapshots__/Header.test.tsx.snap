@@ -2,11 +2,11 @@
 
 exports[`Header renders Header component 1`] = `
 <header
-  class="sc-dkPtRN bJuTIo header"
+  class="sc-dkPtRN cqcA-dL header"
   id="header"
 >
   <a
-    class="sc-bdvvtL gYXAjx"
+    class="sc-bdvvtL deuNmi"
     href="/"
     title="friday"
   >
