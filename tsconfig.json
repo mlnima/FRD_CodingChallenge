@@ -13,6 +13,11 @@
     "allowSyntheticDefaultImports": true,
     "strict": false,
     "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "paths": {
+      "store/*": ["src/store/*"],
+      "Components/*": ["src/Components/*"],
+    },
     "noFallthroughCasesInSwitch": true,
     "module": "esnext",
     "moduleResolution": "node",
@@ -25,3 +30,5 @@
     "src"
   ]
 }
+
+

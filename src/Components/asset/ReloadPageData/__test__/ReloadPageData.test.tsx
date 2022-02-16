@@ -1,10 +1,10 @@
 import React from 'react';
-import {screen,fireEvent } from '@testing-library/react';
+import {screen, render} from '@testing-library/react';
 import {store} from "../../../../store/store";
 import {Provider} from 'react-redux';
 import ReloadPageData from '../ReloadPageData';
-import ReactDom from 'react-dom';
 import {BrowserRouter} from "react-router-dom";
+
 
 let container = document.createElement('div');
 
@@ -19,13 +19,13 @@ afterEach(() => {
 
 describe('ReloadPageData', () => {
     test('renders ReloadPageData component and tests', () => {
-        ReactDom.render(
+        const {container} = render(
             <BrowserRouter>
                 <Provider store={store}>
                     <ReloadPageData/>
                 </Provider>
             </BrowserRouter>
-            , container);
+        );
 
         const heading1 = container.querySelector('h1')
         const reloadButton = screen.getByRole('button')
@@ -37,9 +37,8 @@ describe('ReloadPageData', () => {
         expect(screen.getByText('Reload')).toBeInTheDocument();
         expect(screen.getByText(/We Are Sorry Something Went Wrong/)).toBeInTheDocument();
         expect(screen.getByText(/Please try again in few minutes/)).toBeInTheDocument();
-
-        fireEvent.click(reloadButton)
         expect(reloadButton).not.toBeDisabled()
         expect(reloadButton).toBeInTheDocument();
+
     });
 });

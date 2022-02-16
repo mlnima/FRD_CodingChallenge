@@ -26,7 +26,7 @@ const VehicleCardRenderer: FC = () => {
     }, [vehicles]);
 
     return (
-        <VehicleCardRendererStyledArticle>
+        <VehicleCardRendererStyledArticle className={'vehicle-cards'}>
             {vehicles.map((Vehicle, index) => {
                 return <VehicleCard key={index} Vehicle={Vehicle}/>
             })}

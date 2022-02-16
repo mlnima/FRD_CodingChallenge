@@ -7,13 +7,16 @@ import {BrowserRouter} from "react-router-dom";
 
 describe('VehicleManufacturerRenderer', () => {
     test('renders VehicleManufacturerCard component', async () => {
-        render(
+        const {container} =   render(
             <BrowserRouter>
                 <Provider store={store}>
                     <VehicleCardRenderer/>
                 </Provider>
             </BrowserRouter>
         );
+        const vehicleCardRenderer = container.querySelector('.vehicle-cards')
+        expect(vehicleCardRenderer).toBeInTheDocument();
+
     });
 });
 

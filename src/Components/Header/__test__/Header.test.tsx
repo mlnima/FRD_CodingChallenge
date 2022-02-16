@@ -8,15 +8,15 @@ import {BrowserRouter} from "react-router-dom";
 describe('Header', () => {
     test('renders Header component', () => {
 
-        const view = render(
+        const { container } = render(
             <BrowserRouter>
                 <Provider store={store}>
-                    <Header/>
+                    <Header />
                 </Provider>
             </BrowserRouter>
         );
 
-        const headerElement = view.container.querySelector('#header')
+        const headerElement = container.querySelector('#header')
         expect(headerElement).toBeInTheDocument();
         expect(headerElement).toHaveClass('header');
         expect(headerElement).toMatchSnapshot()

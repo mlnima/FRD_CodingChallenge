@@ -22,7 +22,7 @@ const VehicleManufacturerRenderer: FC<CarManufacturerRendererPropTypes> =
      }) => {
 
         return (
-            <CarManufacturerRendererStyledDiv className={'ads-area'}>
+            <CarManufacturerRendererStyledDiv className={'car-manufacturer-cards'}>
 
                 {vehicleManufacturerData.map(carModel => {
                     return (

@@ -1,6 +1,6 @@
 import {FiltersTypes, VehicleTypes} from "../typeScriptTypes/storeTypes";
 
-const _vehicleInfoReducer = (carModelData: ({ bodyType: string; fuelType: string; enginePowerPS: number; enginePowerKW: number; engineCapacity: number } | { bodyType: string; fuelType: string; enginePowerPS: number; enginePowerKW: number; engineCapacity: number } | { bodyType: string; fuelType: string; enginePowerPS: number; enginePowerKW: number; engineCapacity: number })[]) =>
+const _vehicleInfoReducer = carModelData =>
     carModelData.reduce((filters: FiltersTypes, currentCarModelType: VehicleTypes) => {
         filters.enginePowerPS = [...new Set([...filters.enginePowerPS, currentCarModelType?.enginePowerPS])]
         filters.engineCapacity = [...new Set([...filters.engineCapacity, currentCarModelType?.engineCapacity])]

@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 const LogoStyledLink = styled(Link)`
   text-decoration: none;
-  margin-left: 20px;
+  margin-left: 10px;
    
   .logo-image {
     width: 110px;

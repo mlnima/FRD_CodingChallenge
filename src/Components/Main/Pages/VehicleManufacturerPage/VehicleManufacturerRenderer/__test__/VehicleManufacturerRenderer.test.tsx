@@ -1,31 +1,9 @@
 import React from 'react';
-import {render, screen} from '@testing-library/react';
+import {render} from '@testing-library/react';
 import {store} from "../../../../../../store/store";
 import {Provider} from 'react-redux';
 import VehicleManufacturerRenderer from '../VehicleManufacturerRenderer';
 import {BrowserRouter} from "react-router-dom";
-
-
-// const mockData = [
-//     {
-//         "make": "FORD",
-//         "model": "Fiesta",
-//         "enginePowerPS": 60,
-//         "enginePowerKW": 44,
-//         "fuelType": "Benzin",
-//         "bodyType": "Limousine",
-//         "engineCapacity": 1299
-//     },
-//     {
-//         "make": "FORD",
-//         "model": "Fiesta",
-//         "enginePowerPS": 20,
-//         "enginePowerKW": 44,
-//         "fuelType": "Benzin",
-//         "bodyType": "Limousine",
-//         "engineCapacity": 1299
-//     }
-// ]
 
 const mockVehicleManufacturerData = [
     "B-MAX",
@@ -39,7 +17,7 @@ const mockVehicleManufacturerData = [
 
 describe('VehicleManufacturerRenderer', () => {
     test('renders VehicleManufacturerCard component', async () => {
-        render(
+        const {container} = render(
             <BrowserRouter>
                 <Provider store={store}>
                     <VehicleManufacturerRenderer vehicleManufacturerData={mockVehicleManufacturerData}
@@ -48,6 +26,10 @@ describe('VehicleManufacturerRenderer', () => {
                 </Provider>
             </BrowserRouter>
         );
+
+        const vehicleManufacturerRenderer = container.querySelector('.car-manufacturer-cards')
+        expect(vehicleManufacturerRenderer).toBeInTheDocument();
+
     });
 });
 

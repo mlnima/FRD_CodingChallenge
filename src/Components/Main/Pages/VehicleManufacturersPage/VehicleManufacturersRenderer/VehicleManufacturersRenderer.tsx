@@ -17,7 +17,7 @@ interface VehicleManufacturersRendererPropTypes {
 const VehicleManufacturersRenderer: FC<VehicleManufacturersRendererPropTypes> = ({carManufacturers}) => {
 
     return (
-        <CarManufacturersRendererStyledDiv className={'ads-area'}>
+        <CarManufacturersRendererStyledDiv className={'car-manufacturers-cards'}>
             {carManufacturers.map(VehicleManufacturer => {
                 return (
                     <VehicleManufacturerCard key={VehicleManufacturer} VehicleManufacturer={VehicleManufacturer}/>

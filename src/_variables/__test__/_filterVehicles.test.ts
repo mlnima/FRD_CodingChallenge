@@ -26,7 +26,7 @@ const mockFilterData = {
 }
 
 describe('_filterVehicles', () => {
-    test('convert variable name to split string name', () => {
+    test('filter vehicles', () => {
         expect(_filterVehicles(mockVehiclesData, mockFilterData)).toEqual(expect.arrayContaining([{
                 enginePowerPS: 10,
                 engineCapacity: 20,
